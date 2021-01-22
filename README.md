@@ -6,7 +6,6 @@ Wyze.com.
 Authors:
 
 - Haley Firth
-- etc.
 
 To execute these tests:
 
