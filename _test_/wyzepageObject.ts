@@ -24,7 +24,9 @@ export class wyzepageObject {
     // above selectors are for tracking a shippment 
     logo: By = By.xpath('//a[@class="logo"]');
     search: By= By.xpath ('//input[@id="search"]');
-    cart: By= By.xpath('//span[text()="Home Monitoring"]');
+    searchButt: By=By.xpath('//span[@class="search-icon-wrapper"]')
+    go: By= By.xpath('//button[@class= "action search"]');
+    cart: By= By.xpath('//a[@class="action showcart"]');
     deleteItem: By= By.xpath('//a[@class="action action-delete"]');
     //deleteItem might be picky, but I believe it should work. 
     shopButt: By= By.xpath ('//span[text()="Shop"]');
@@ -41,7 +43,7 @@ export class wyzepageObject {
       this.driver = driver
     };
 
-async sendKey(elementBy: By, keys){
+async sendKey(elementBy: By, keys,){
   await this.driver.wait(until.elementLocated(elementBy));
   return this.driver.findElement(elementBy).sendKeys(keys);
 };
@@ -52,10 +54,6 @@ async click(elementBy: By){
   await this.driver.wait(until.elementLocated(elementBy));
   return (await this.driver.findElement(elementBy)).click();
 };
-async login(){
-  await this.navigate();
-  await this.click(this.email, );
-}
 }
 
   
