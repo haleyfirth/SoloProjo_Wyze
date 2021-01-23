@@ -40,6 +40,19 @@ test("Can add Wyze Cam Pan to cart", async()=> {
 test("Can Delete Cam from Cart", async() =>{
   await wyze.click(wyze.deleteItem);
   await wyze.driver.sleep(3000);
+
+});
+test("Can Navigate through menu?", async()=> {
+  await wyze.click(wyze.logo);
+  await wyze.click(wyze.shopButt);
+  await wyze.click(wyze.forumsButt);
+  await wyze.click(wyze.supportButt);
+  await wyze.click(wyze.exploreButt);
+  await wyze.click(wyze.camPlus);
+  await wyze.click(wyze.monitoring);
+  await wyze.driver.sleep(1000);
+  await wyze.click(wyze.logo);
+  await wyze.driver.sleep(1000);
   await wyze.driver.quit();
 });
 
@@ -53,7 +66,7 @@ test("Can Delete Cam from Cart", async() =>{
  //   await wyze.navigate()
  //   await wyze.click(wyze.loginbutt);
  //   await wyze.sendKey(wyze.email, "testing.haley@gmail.com");
-  //  await wyze.sendKey(wyze.password, "Firth1234");
+  //  await wyze.sendKey(wyze.password, "Fi***4");
   //  await wyze.click(wyze.loginRobot);
   //  await wyze.click(wyze.signIn);
   //  await wyze.click(wyze.myOrders);
